@@ -17,7 +17,7 @@ body {
     padding: 0;
     font-family: 'Noto Serif JP', sans-serif;
     color: rgba(0, 0, 0, 0.6);
-    background-color: #fff4f4;
+    background-color: #fff;
 }
 
 aside {
@@ -73,11 +73,6 @@ header h1 {
     left: 35%;
 }
 
-nav ul li:last-child::after {
-    content: '';
-    /* 最後のli要素の「/」をなくします */
-}
-
 nav ul li a {
     text-decoration: none;
     color: #333;
@@ -130,7 +125,13 @@ main .contents li.show img {
     opacity: 0;
     transform: translateY(20px);
     transition: 1s;
+    margin-top: 100px;
 }
+
+.contentsText h2:first-letter{
+    color:#6dacc8;
+    font-size:150%;
+  }
 
 .v_line_fix {
     margin-left: 50%;
@@ -158,7 +159,7 @@ main .contents li.show img {
     content: "";
     display: block;
     height: 5px;
-    background: repeating-linear-gradient(-45deg, #fc693b, #fca83b 8px, transparent 0, transparent 20px);
+    /* background: repeating-linear-gradient(-45deg, #fc693b, #fca83b 8px, transparent 0, transparent 20px); */
 }
 
 .Profile_box {
@@ -166,7 +167,7 @@ main .contents li.show img {
     vertical-align: top;
     width: 80%;
     font-size: 18px;
-    margin: 10px 10px;
+    margin: 50px 10px;
 }
 
 .contents img {
@@ -202,7 +203,13 @@ main .contents li.show img {
     padding: 1%;
 }
 
-.History_box {
+.History_Class {
+    clear: both;
+}
+
+.History_box::after {
+    content: "";
+    display: block;
     clear: both;
 }
 
@@ -228,20 +235,24 @@ main .contents li.show img {
 .Others_box {
     display: inline-block;
     vertical-align: top;
-    width: 25%;
-    margin: 10px 10px;
+    width: 15%;
+	margin: 10px 10px;
 }
 
 .Others_box img {
-    height: 25%;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 10px;
+    width: 60%;
+	cursor: pointer;
+	transition: 0.3s;
+	border-radius: 10px;
+	margin: auto;
+	text-align: center;
 }
 
 .Others_box p {
-    margin: auto;
-    text-align: center;
+    margin-top: 10px;
+	text-align: center;
+	line-height: 1.8;
+	letter-spacing: 0.3em;
 }
 
 .Others_box .rinkOpen:hover img {
